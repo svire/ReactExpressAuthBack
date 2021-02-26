@@ -1,8 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-//https://bezkoder.com/node-js-jwt-authentication-mysql/
-//https://bezkoder.com/react-redux-jwt-auth/
 const app = express();
 
 var corsOptions = {
@@ -24,9 +22,7 @@ const db = require("./app/models");
 const Role = db.role;
 
 /*
- force: true adds a DROP TABLE IF EXISTS before 
- trying to create the table - if you force,
-  existing tables will be overwritten.
+ force: true adds a DROP TABLE IF EXISTS before  trying to create the table - if  force,  existing tables will be overwritten.
 */
 db.sequelize.sync({force: false}).then(() => {
   console.log("no drop");
